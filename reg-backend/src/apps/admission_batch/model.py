@@ -1,0 +1,21 @@
+from typing import Optional
+import uuid
+from bson import ObjectId
+from pydantic import BaseModel, Field
+
+from utils.py_object_id import PyObjectId
+
+
+class AdmissionBatch(BaseModel):
+    id: str = Field(default_factory=uuid.uuid4, alias="_id")
+    name: str = Field()
+
+    active: bool = Field(default=True)
+
+    class Config:
+        allow_population_by_field_name = True
+
+
+class UpdateAdmissionBatch(BaseModel):
+    name: Optional[str]
+    active: Optional[bool]
