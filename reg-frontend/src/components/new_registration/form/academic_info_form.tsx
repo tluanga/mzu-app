@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import useStore from '../../../store/new_registration.store'
 
 import TextInput from '../elements/text_input'
-import IAcademicInfo from '../../../lib/interface/IAcademicInfo'
+import IAcademicInfo from '../../../utils/interface/IAcademicInfo'
 import NumberInput from '../elements/number_input'
 import { IAdmissionBatch } from '../../../types/admission_batch'
 import AdmissionBatchSelect from '../elements/admission-batch-select'
