@@ -8,11 +8,12 @@ import GenderSelect from '../../ui_kit/gender-select/component/gender-select.com
 import DateOfBirth from '../elements/date_of_birth'
 import MultilineTextInput from '../elements/multiline_input'
 import TextInput from '../elements/text_input'
-import IPersonalInfo from '../../../lib/interface/IPersonalInfo'
+import IPersonalInfo from '../../../utils/interface/IPersonalInfo'
 
 import formatDate from 'intl-dateformat'
 
 import ClipLoader from "react-spinners/ClipLoader";
+import {backendServerUrl} from '../../../utils/backend-server.config'
 
 // -------React Toastify---------
 import { ToastContainer, toast } from 'react-toastify';
@@ -108,7 +109,8 @@ const PersonalDataForm = () => {
     
     
     setLoading(true)
-    const response = await fetch('http://localhost:8000/registration_application/personal_info', {
+    const url=backendServerUrl+'/registration_application/personal_info'
+    const response = await fetch(url, {
       method: "POST",
       headers: {
         'Accept': 'application/json',

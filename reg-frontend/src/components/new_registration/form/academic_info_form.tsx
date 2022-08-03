@@ -13,6 +13,9 @@ import ProgrammeCategorySelect from '../elements/programme-category-select'
 import ProgrammeSelect from '../elements/programme-select'
 import { FormStep } from '../../../utils/enum/new_application_form_step-enum'
 import Loader from 'react-spinners/GridLoader';
+
+import {backendServerUrl} from '../../../utils/backend-server.config'
+
 const override: CSSProperties = {
   display: "block",
   margin: "0 auto",
@@ -62,7 +65,7 @@ const AcademicInfoForm = () => {
       academic_info:academic_info,
     }
     setLoading(true)
-    const url = 'http://localhost:8000/registration_application/' + id
+    const url =  backendServerUrl+'/registration_application/' + id
     console.log(url)
     console.log('payload for academic informartion is ', payload)
     

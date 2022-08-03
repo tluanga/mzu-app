@@ -1,10 +1,10 @@
 
-import Upload from 'rc-upload'
+
 import React from 'react'
-import { useForm } from 'react-hook-form'
 import { FormStep } from '../../../utils/enum/new_application_form_step-enum'
 import useStore from '../../../store/new_registration.store'
 import DocumentUpload from '../elements/document-upload'
+import {backendServerUrl} from '../../../utils/backend-server.config'
 
 
 interface IPersonalInfo{
@@ -75,7 +75,8 @@ const UploadDocumentForm = () => {
     body.append("file", file)
     console.log('file selected',file)
 
-    const response=await  fetch("http://localhost:8000/registration_application/upload_signature", {
+    const url=backendServerUrl+'registration_application/upload_signature' 
+    const response=await  fetch(url, {
         body,
         
         method: "POST"
@@ -97,8 +98,8 @@ const UploadDocumentForm = () => {
       body.append("application_id",registration_data._id!)
     body.append("file", file)
     console.log('file selected',file)
-
-    const response=await  fetch("http://localhost:8000/registration_application/upload_class_x_certificate", {
+    const url=backendServerUrl+'/registration_application/upload_class_x_certificate' 
+    const response=await  fetch(url, {
         body,
         
         method: "POST"
@@ -121,8 +122,8 @@ const UploadDocumentForm = () => {
       body.append("application_id",registration_data._id!)
     body.append("file", file)
     console.log('file selected',file)
-
-    const response=await  fetch("http://localhost:8000/registration_application/upload_last_exam_marksheet", {
+    const url=backendServerUrl+'/registration_application/upload_last_exam_marksheet' 
+    const response=await  fetch(url, {
         body,
         
         method: "POST"

@@ -1,7 +1,7 @@
 import { NextPageContext } from 'next'
 import Head from 'next/head'
 import React from 'react'
-import IRegistrationApplication from '../../lib/interface/IRegistrationApplication'
+import IRegistrationApplication from '../../utils/interface/IRegistrationApplication'
 import useStore from '../../store/new_registration.store'
 import Header from '../../components/new_registration/header'
 import PersonalInfoForm from '../../components/new_registration/form/personal_info_form'
@@ -15,9 +15,10 @@ import store from '../../store/new_registration_application.store'
 
 import { FormStep } from '../../utils/enum/new_application_form_step-enum'
 
+import {backendServerUrl} from '../../utils/backend-server.config'
 
 export const getStaticPaths = async () => {
-    const response = await fetch('http://localhost:8000/registration_application/')
+    const response = await fetch(backendServerUrl+'/registration_application/')
     const data = await response.json()
     const paths = data.map((application:IRegistrationApplication) => {
         return {
