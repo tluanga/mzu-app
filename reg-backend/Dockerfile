@@ -16,4 +16,4 @@ RUN pip install --upgrade pip
 RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
 # Command to execute on startup
-CMD ["uvicorn", "main:app","--host", "0.0.0.0","--port","80","--reload"]
+CMD ["uvicorn", "main:app","--host", "0.0.0.0","--port","8000","--reload"]
