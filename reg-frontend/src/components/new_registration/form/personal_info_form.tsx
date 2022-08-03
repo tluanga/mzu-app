@@ -109,7 +109,9 @@ const PersonalDataForm = () => {
     
     
     setLoading(true)
-    const url=backendServerUrl+'/registration_application/personal_info'
+    
+    const url = backendServerUrl + '/registration_application/personal_info'
+    console.log('The backend server url is ',url)
     const response = await fetch(url, {
       method: "POST",
       headers: {

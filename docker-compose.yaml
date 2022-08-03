@@ -7,8 +7,7 @@ services:
     build: ./reg-frontend
     ports:
       - 3000:3000
-    environment:
-      - reg-backend=reg-backend
+ 
     volumes:
       - ./reg-frontend/src/utils:/app/src/utils
       - ./reg-frontend/src/types:/app/src/types
@@ -17,8 +16,6 @@ services:
       - ./reg-frontend/src/pages:/app/src/pages
       - ./reg-frontend/src/components:/app/src/components
       - ./reg-frontend/src/assets:/app/src/assets
-     
-    
 
   reg-backend:
     image: reg-backend

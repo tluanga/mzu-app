@@ -3,7 +3,7 @@ import { useState, useContext,CSSProperties } from 'react'
 import Image from 'next/image';
 import UniversityStudent from '../../assets/university-student.jpg';
 import  useStore  from '../../store/new_registration.store';
-
+import {backendServerUrl} from '../../utils/backend-server.config'
 // import {useRegistrationContext} from '../../context/registration.context'
 // import IStudentRegistration from '../../lib/interface/IStudentRegistration';
 // import studentRegistrationService from '../../lib/services/student-registration.service';
@@ -56,7 +56,8 @@ const Landing: React.FC = () => {
   async function submitHander() {
     setLoading(true)
     console.log('submithandler')
-        const application_data_url = 'http://localhost:8000/registration_application/'+applicationId
+
+      const application_data_url =backendServerUrl+'/registration_application/'+applicationId
       const application_data_response = await fetch(application_data_url)
       const application_data = await application_data_response.json()
     console.log('application_data ', application_data_response)
