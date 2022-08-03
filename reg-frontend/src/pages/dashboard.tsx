@@ -11,7 +11,7 @@ const Dashboard = () => {
     <div>
       {/* <SampleTable/> */}
       <NewTable/>
-      <SideBar/>
+        <SideBar/>
          
     </div>
   )

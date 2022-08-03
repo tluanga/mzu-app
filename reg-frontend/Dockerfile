@@ -5,7 +5,7 @@ COPY ./src /app/src
 
 WORKDIR /app/src
 
-EXPOSE 1337
+EXPOSE 3000
 
 RUN yarn install
 
