@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormStep } from '../../../lib/enum/new_application_form_step-enum'
+import { FormStep } from '../../../utils/enum/new_application_form_step-enum'
 import useStore from '../../../store/new_registration.store'
 import Head from 'next/head'
 

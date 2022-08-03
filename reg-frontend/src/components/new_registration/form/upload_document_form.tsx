@@ -2,7 +2,7 @@
 import Upload from 'rc-upload'
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import { FormStep } from '../../../lib/enum/new_application_form_step-enum'
+import { FormStep } from '../../../utils/enum/new_application_form_step-enum'
 import useStore from '../../../store/new_registration.store'
 import DocumentUpload from '../elements/document-upload'
 

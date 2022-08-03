@@ -3,7 +3,7 @@ import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
 import {GENDERS} from '../constants/gender.constant'
 import { GenderType } from '../type/gender.type'
-import GenderEnum from '../../../../lib/enum/gender-enum'
+import GenderEnum from '../../../../utils/enum/gender-enum'
 
 
 interface props{

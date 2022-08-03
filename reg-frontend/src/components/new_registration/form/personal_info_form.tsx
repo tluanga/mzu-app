@@ -22,7 +22,7 @@ import MobileNoInput from '../elements/mobile_no_input'
 
 // -----------Zustand store---
 import useStore from '../../../store/new_registration.store'
-import { FormStep } from '../../../lib/enum/new_application_form_step-enum'
+import { FormStep } from '../../../utils/enum/new_application_form_step-enum'
 
 // ---------React - spinner
 

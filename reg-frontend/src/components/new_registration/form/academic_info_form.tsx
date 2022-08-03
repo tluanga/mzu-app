@@ -11,7 +11,7 @@ import { IAdmissionBatch } from '../../../types/admission_batch'
 import AdmissionBatchSelect from '../elements/admission-batch-select'
 import ProgrammeCategorySelect from '../elements/programme-category-select'
 import ProgrammeSelect from '../elements/programme-select'
-import { FormStep } from '../../../lib/enum/new_application_form_step-enum'
+import { FormStep } from '../../../utils/enum/new_application_form_step-enum'
 import Loader from 'react-spinners/GridLoader';
 const override: CSSProperties = {
   display: "block",

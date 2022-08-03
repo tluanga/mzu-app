@@ -13,7 +13,7 @@ import Payment from '../../components/new_registration/form/payment'
 
 import store from '../../store/new_registration_application.store'
 
-import { FormStep } from '../../lib/enum/new_application_form_step-enum'
+import { FormStep } from '../../utils/enum/new_application_form_step-enum'
 
 
 export const getStaticPaths = async () => {

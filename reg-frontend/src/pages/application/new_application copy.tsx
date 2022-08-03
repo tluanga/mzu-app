@@ -3,7 +3,7 @@ import PersonalInfoForm from '../../components/new_registration/form/personal_in
 import Payment from '../../components/new_registration/form/payment'
 import Upload from '../../components/new_registration/upload'
 import CategorySelect from '../../components/ui_kit/category-select/component/category-select.component'
-import { FormStep } from '../../lib/enum/new_application_form_step-enum'
+import { FormStep } from '../../utils/enum/new_application_form_step-enum'
 import useStore from '../../store/new_registration.store'
 import FormStepper from '../../components/new_registration/elements/form_stepper'
 import AcademicInfoForm from '../../components/new_registration/form/academic_info_form'
