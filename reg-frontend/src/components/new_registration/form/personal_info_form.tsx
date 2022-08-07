@@ -29,6 +29,7 @@ import { FormStep } from '../../../utils/enum/new_application_form_step-enum'
 
 
 import Loader from 'react-spinners/GridLoader';
+import axios from 'axios'
 const override: React.CSSProperties = {
   display: "block",
   margin: "0 auto",
@@ -110,7 +111,16 @@ const PersonalDataForm = () => {
     
     setLoading(true)
     
-    const url = backendServerUrl + '/registration_application/personal_info'
+    //---testing code
+    const testurl = 'http://backend:8000/registration_application/'
+    const resp = await fetch(testurl, {
+      
+    })
+    console.log('test fetch ßßresponse',resp)
+
+    
+
+    const url =   'http://reg-backend:8000/registration_application/personal_info'
     console.log('The backend server url is ',url)
     const response = await fetch(url, {
       method: "POST",

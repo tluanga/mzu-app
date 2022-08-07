@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "proxy":"http://reg-backend:8000",
+  
   "dependencies": {
     "@headlessui/react": "^1.6.6",
     "@heroicons/react": "^1.0.6",
