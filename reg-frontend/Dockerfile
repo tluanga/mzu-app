@@ -9,4 +9,6 @@ EXPOSE 3000
 
 RUN yarn install
 
-CMD ["yarn","dev"]
+CMD ["yarn","build"]
+
+
